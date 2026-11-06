@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Terms of Service — banking-api</title>
+<style>
+:root{--bg:#fbfcfd;--fg:#1a2230;--muted:#5d6b7a;--line:#e1e7ec;--accent:#0b6e67;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#10161d;--fg:#e3e9ee;--muted:#95a3b2;--line:#263240;--accent:#3fc1b4;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:46rem;margin-inline:auto;padding:3rem 1.25rem 5rem}
+h1{font-size:1.8rem;line-height:1.2;margin:0 0 .25rem}
+.sub{color:var(--muted);margin:0 0 2.5rem;font-size:.9rem}
+h2{font-size:1.1rem;margin:2.5rem 0 .6rem;padding-top:1.2rem;border-top:1px solid var(--line)}
+h2:first-of-type{border-top:0;padding-top:0}
+ul{padding-left:1.2rem}
+li{margin:.3rem 0}
+a{color:var(--accent)}
+.fill{background:rgba(214,158,46,.18);padding:.1rem .35rem;border-radius:.25rem}
+footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+<main>
+  <h1>Terms of Service</h1>
+  <p class="sub">banking-api · Last updated 6 November 2026</p>
+
+  <h2>Scope</h2>
+  <p>banking-api is a private tool operated by <span class="fill">trustsentinel.eu</span> for that
+  operator's own use. It is not a public service, it has no other users, and no account can
+  be created on it. These terms govern the operator's use of the tool and describe what it
+  does, for the benefit of the account servicing institutions and the account information
+  service provider through which it connects.</p>
+
+  <h2>What the service does</h2>
+  <p>The application connects to the operator's own payment accounts through
+  <strong>Enable Banking Oy</strong>, a regulated account information service provider, and
+  retrieves account details, balances and transactions. It uses that information to show
+  which pending payment notices correspond to charges that have already been made.</p>
+
+  <h2>What the service does not do</h2>
+  <ul>
+    <li>It does not initiate payments or transfers. It holds no payment initiation
+    functionality of any kind.</li>
+    <li>It does not ask for, receive, or store bank credentials or authentication factors.</li>
+    <li>It does not share data with third parties, sell data, or profile anyone.</li>
+    <li>It does not act on behalf of anyone other than its own operator.</li>
+  </ul>
+
+  <h2>Consent and access</h2>
+  <p>Access requires the operator's explicit consent, granted at the bank through strong
+  customer authentication. Consent is granted for a limited period, after which access stops
+  until it is renewed through the same authenticated flow. The operator may revoke consent at
+  any time from the bank's own application or from the Enable Banking control panel; revocation
+  takes effect immediately.</p>
+  <p>Access frequency respects the limits set by the account servicing institution and by
+  PSD2, including the limit on unattended access requests per day. The application caches
+  retrieved data locally in order to stay within those limits.</p>
+
+  <h2>Accuracy</h2>
+  <p>Information shown is a convenience copy of data provided by the bank and may be delayed,
+  incomplete, or superseded. The reconciliation between notices and charges is a suggestion
+  based on matching merchant names and amounts; it can produce false matches or miss genuine
+  ones. <strong>The bank's own statements are the authoritative record</strong> and should be
+  relied upon for any financial decision.</p>
+
+  <h2>Availability and warranty</h2>
+  <p>The application is provided as is, with no warranty of availability, accuracy or fitness
+  for any purpose. It may stop working at any time, for instance when a consent expires, when
+  an upstream interface changes, or when the operator stops running it.</p>
+
+  <h2>Liability</h2>
+  <p>To the extent permitted by law, the operator accepts no liability to any third party
+  arising from this tool, as it is used solely by the operator and on the operator's own
+  accounts. Nothing here limits any right that cannot be limited by law.</p>
+
+  <h2>Changes</h2>
+  <p>These terms may be updated. The date at the top reflects the current version.</p>
+
+  <h2>Governing law and contact</h2>
+  <p>These terms are governed by the laws of Spain. Contact:
+  <span class="fill">info@zgos.eu</span>.</p>
+
+  <footer>
+    banking-api · <a href="privacy.html">Privacy Policy</a>
+  </footer>
+</main>
+</body>
+</html>

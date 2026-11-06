@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy — banking-api</title>
+<style>
+:root{--bg:#fbfcfd;--fg:#1a2230;--muted:#5d6b7a;--line:#e1e7ec;--accent:#0b6e67;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#10161d;--fg:#e3e9ee;--muted:#95a3b2;--line:#263240;--accent:#3fc1b4;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:46rem;margin-inline:auto;padding:3rem 1.25rem 5rem}
+h1{font-size:1.8rem;line-height:1.2;margin:0 0 .25rem}
+.sub{color:var(--muted);margin:0 0 2.5rem;font-size:.9rem}
+h2{font-size:1.1rem;margin:2.5rem 0 .6rem;padding-top:1.2rem;border-top:1px solid var(--line)}
+h2:first-of-type{border-top:0;padding-top:0}
+p,li{color:var(--fg)}
+ul{padding-left:1.2rem}
+li{margin:.3rem 0}
+a{color:var(--accent)}
+code{background:rgba(125,145,165,.15);padding:.1rem .35rem;border-radius:.25rem;font-size:.9em}
+.fill{background:rgba(214,158,46,.18);padding:.1rem .35rem;border-radius:.25rem}
+footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="sub">banking-api · Last updated 6 November 2026</p>
+
+  <h2>Who is responsible</h2>
+  <p>This application, <strong>banking-api</strong>, is operated by <span class="fill">trustsentinel.eu</span>
+  (<span class="fill">info@zgos.eu</span>) as the data controller. It is a private,
+  single-user tool: the only person whose data it processes is its own operator.
+  It is not offered to the public and has no other users.</p>
+
+  <h2>What the application does</h2>
+  <p>banking-api reads the operator's own bank account information in order to reconcile
+  pending payment notices received by email against the charges that actually appear on
+  the account. It is strictly read-only. It cannot initiate payments, move money, or
+  modify anything at the bank.</p>
+  <p>Access to bank data is provided by <strong>Enable Banking Oy</strong>, a regulated
+  account information service provider (AISP), acting under the PSD2 framework. The
+  application never holds bank credentials: authentication happens at the bank, and the
+  bank returns an access token tied to an explicit consent.</p>
+
+  <h2>What data is processed</h2>
+  <ul>
+    <li>Account identifiers: account name, IBAN, currency, account type.</li>
+    <li>Balances.</li>
+    <li>Transactions: date, amount, currency, status, counterparty name, and payment
+    reference or concept.</li>
+    <li>Technical data needed to maintain the connection: the Enable Banking session
+    identifier and the consent expiry date.</li>
+  </ul>
+  <p>No bank credentials, card numbers, or authentication factors are ever received or
+  stored by this application.</p>
+
+  <h2>Purpose and legal basis</h2>
+  <p>The sole purpose is personal finance reconciliation for the operator's own accounts.
+  The legal basis is the operator's <strong>explicit consent</strong> (GDPR Article 6(1)(a)),
+  given to their bank through the Enable Banking authorisation flow and renewable at the
+  operator's choice.</p>
+
+  <h2>Where the data is stored</h2>
+  <p>Account and transaction data is stored <strong>locally, on the operator's own computer</strong>,
+  in a file readable only by the operator's user account. Nothing is uploaded to a server
+  operated by this application, because this application has no server. The signing key used
+  to authenticate against the Enable Banking API also never leaves that machine.</p>
+
+  <h2>Retention</h2>
+  <p>Transactions are cached locally for the period the operator queries, and the cache is
+  refreshed or discarded as it is superseded. The local data store can be deleted at any
+  time by removing the application's data directory, which erases all cached account and
+  transaction data immediately.</p>
+
+  <h2>Sharing</h2>
+  <p>No data is shared with anyone. There are no third-party recipients, no analytics, no
+  advertising, no tracking, and no transfers outside the EEA performed by this application.
+  Enable Banking Oy processes the data in its role as the regulated provider of the
+  connection, under its own privacy policy.</p>
+
+  <h2>Automated decisions</h2>
+  <p>The application matches expected charges against transactions by comparing merchant
+  names and amounts. This is a convenience that produces a suggestion on a personal
+  dashboard. No decision with legal or similarly significant effects is made automatically.</p>
+
+  <h2>Rights</h2>
+  <p>As the only data subject is the operator, rights of access, rectification, erasure,
+  restriction, portability and objection are exercised directly by deleting the local data
+  or revoking the consent. Consent can be withdrawn at any time, with immediate effect, in
+  either of two places:</p>
+  <ul>
+    <li>In the bank's own application, under third-party or connected-app access.</li>
+    <li>In the Enable Banking control panel, by deleting the session.</li>
+  </ul>
+  <p>Withdrawal stops all further access. Complaints may be addressed to the Spanish data
+  protection authority (AEPD, <a href="https://www.aepd.es">aepd.es</a>).</p>
+
+  <h2>Security</h2>
+  <p>The private key used to sign API requests is held locally with owner-only file
+  permissions. Connections to the Enable Banking API use TLS. The application exposes no
+  network service and no write operations of any kind.</p>
+
+  <h2>Contact</h2>
+  <p>For any question about this policy or the data it describes:
+  <span class="fill">info@zgos.eu</span>.</p>
+
+  <footer>
+    banking-api · <a href="terms.html">Terms of Service</a>
+  </footer>
+</main>
+</body>
+</html>
